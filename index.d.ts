@@ -25,11 +25,11 @@ export class Channel {
 
     off(event: any): any;
 
-    on(event: any, callback: any): void;
+    on(event: any, callback: (payload: any) => any): void;
 
-    onClose(callback: any): void;
+    onClose(callback: Function): void;
 
-    onError(callback: any): any;
+    onError(callback: Function): any;
 
     onMessage(event: any, payload: any, ref: any): any;
 
@@ -71,11 +71,11 @@ export class Socket {
 
     channel(topic: any, ...args: any[]): any;
 
-    connect(params: any): any;
+    connect(params?: any): any;
 
     connectionState(): any;
 
-    disconnect(callback: any, code: any, reason: any): void;
+    disconnect(callback: Function, code: any, reason: any): void;
 
     endPointURL(): any;
 
@@ -87,7 +87,7 @@ export class Socket {
 
     makeRef(): any;
 
-    onClose(callback: any): void;
+    onClose(callback: Function): void;
 
     onConnClose(event: any): any;
 
@@ -97,11 +97,11 @@ export class Socket {
 
     onConnOpen(): any;
 
-    onError(callback: any): void;
+    onError(callback: Function): void;
 
-    onMessage(callback: any): void;
+    onMessage(callback: (event?: string, payload?: any, ref?: any) => any): void;
 
-    onOpen(callback: any): void;
+    onOpen(callback: Function): void;
 
     protocol(): any;
 
@@ -114,3 +114,5 @@ export class Socket {
     triggerChanError(): any;
 
 }
+
+
