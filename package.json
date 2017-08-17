@@ -1,6 +1,6 @@
 {
   "name": "phoenix-ts",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Phoenix client with tsd files",
   "main": "dist/phoenix.es5.js",
   "module": "dist/phoenix.es6.js",
