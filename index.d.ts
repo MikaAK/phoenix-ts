@@ -67,7 +67,7 @@ export class LongPoll {
 }
 
 export class Socket {
-    constructor(endPoint: any, ...args: any[]);
+    constructor(endPoint: any, params: Object);
 
     channel(topic: any, ...args: any[]): any;
 

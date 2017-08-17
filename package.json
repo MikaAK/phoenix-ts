@@ -2,11 +2,18 @@
   "name": "phoenix-ts",
   "version": "1.2.3",
   "description": "Phoenix client with tsd files",
-  "main": "phoenix.js",
+  "main": "dist/phoenix.js",
+  "module": "phoenix.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "~6.26.0",
+    "babel-preset-latest": "~6.24.1",
+    "rollup": "~0.47.6",
+    "rollup-plugin-babel": "~3.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "rm -rf dist/ && rollup -c"
   },
   "repository": {
     "type": "git",
